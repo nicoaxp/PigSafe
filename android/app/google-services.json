@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952379386636",
+    "project_id": "pigsafe-96f0d",
+    "storage_bucket": "pigsafe-96f0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952379386636:android:fd4d2ae599b4860360b729",
+        "android_client_info": {
+          "package_name": "com.example.firstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952379386636-htg52bhm8h067f3fdfmf79gq7n972vo1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGBcYrLciFyGtgJxdOJ8fOHRcPybbOB-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952379386636-htg52bhm8h067f3fdfmf79gq7n972vo1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
