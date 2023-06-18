@@ -9,6 +9,7 @@ import 'onboarding/onboarding_screen.dart';
 int? isViewed;
 
 void main() async {
+  //we make the entire ui transparent so we dont have the darker thing on the upper side of the screen
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );

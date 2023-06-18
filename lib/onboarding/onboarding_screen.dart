@@ -58,9 +58,15 @@ class _Onboarding_screenState extends State<Onboarding_screen> {
                   padding: const EdgeInsets.all(40.0),
                   child: Column(
                     children: [
+                      const SizedBox(
+                        height: 30,
+                      ),
                       SvgPicture.asset(
                         contents[i].image,
                         height: 300,
+                      ),
+                      const SizedBox(
+                        height: 20,
                       ),
                       Text(
                         contents[i].title,
@@ -77,7 +83,7 @@ class _Onboarding_screenState extends State<Onboarding_screen> {
                         //For centering the text box to the center
                         textAlign: TextAlign.center,
                         style: const TextStyle(
-                          fontSize: 18,
+                          fontSize: 22,
                           color: Colors.grey,
                         ),
                       ),
@@ -119,6 +125,7 @@ class _Onboarding_screenState extends State<Onboarding_screen> {
                 ),
               ),
               child: Text(
+                //if we are on the last screen, it will change the button text, navigate to mainpage and set the onboarding screen as viewed so we won't see it again unless we reinstall the app
                 currentIndex == contents.length - 1 ? "Continuar" : "Siguiente",
                 style: const TextStyle(color: Colors.black, fontSize: 20),
               ),
@@ -133,8 +140,8 @@ class _Onboarding_screenState extends State<Onboarding_screen> {
                   );
                 }
                 _controller.nextPage(
-                  duration: const Duration(milliseconds: 100),
-                  curve: Curves.bounceIn,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeInOut,
                 );
               },
             ),
@@ -144,6 +151,7 @@ class _Onboarding_screenState extends State<Onboarding_screen> {
     );
   }
 
+//This is for the 3 positional dots of the onboarding screen
   Container buildDot(int index, BuildContext context) {
     return Container(
       height: 10,

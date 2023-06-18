@@ -9,24 +9,20 @@ class UnbordingContent {
 
 List<UnbordingContent> contents = [
   UnbordingContent(
-      title: 'Quality Food',
-      image: 'assets/quality.svg',
+      title: 'Tu hucha virtual',
+      image: 'assets/savings.svg',
       description:
-          "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
-          "industry's standard dummy text ever since the 1500s, "
-          "when an unknown printer took a galley of type and scrambled it "),
+          "Con PigSafe dispondrás de una hucha personal, en la cual podrás añadir los ahorros que quieras y romperla cuando decidas de que ya es hora de gastarlo."),
   UnbordingContent(
-      title: 'Fast Delevery',
-      image: 'assets/delevery.svg',
+      title: 'Cumple tus metas',
+      image: 'assets/goal.svg',
       description:
-          "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
-          "industry's standard dummy text ever since the 1500s, "
-          "when an unknown printer took a galley of type and scrambled it "),
+          "Proponte un nuevo objetivo personal, como pueden ser unas vacaciones, un coche nuevo o ¡una PlayStation 5!"
+          "Tendrás un control sobre tus metas y podrás saber cuánto te queda por cumplirlas."),
   UnbordingContent(
-      title: 'Reward surprises',
-      image: 'assets/reward.svg',
+      title: '¡Empieza ya!',
+      image: 'assets/rocket.svg',
       description:
-          "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
-          "industry's standard dummy text ever since the 1500s, "
-          "when an unknown printer took a galley of type and scrambled it "),
+          "No esperes más y empieza ya a ahorrar, pulsando en Continuar te pediremos tus datos de acceso, si no tienes una cuenta creada todavía "
+          "podrás registrarte en el botón de Registrarse ahora"),
 ];
