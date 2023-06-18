@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -35,6 +35,7 @@ class _Onboarding_screenState extends State<Onboarding_screen> {
   _storeOnboardingInformation() async {
     int isViewed = 0;
     SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('Onboarding_screen', isViewed);
   }
 
   @override
@@ -121,8 +122,9 @@ class _Onboarding_screenState extends State<Onboarding_screen> {
                 currentIndex == contents.length - 1 ? "Continuar" : "Siguiente",
                 style: const TextStyle(color: Colors.black, fontSize: 20),
               ),
-              onPressed: () {
+              onPressed: () async {
                 if (currentIndex == contents.length - 1) {
+                  await _storeOnboardingInformation();
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
