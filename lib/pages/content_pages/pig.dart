@@ -28,6 +28,12 @@ class _UserPigState extends State<UserPig> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text('Hucha'),
+        ),
+        backgroundColor: Colors.black,
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(

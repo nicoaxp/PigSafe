@@ -6,7 +6,6 @@ import 'content_pages/home.dart';
 import 'content_pages/pig.dart';
 import 'content_pages/scope.dart';
 import 'content_pages/settings.dart';
-//import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -39,6 +38,8 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         fixedColor: Colors.pink,
+        unselectedItemColor: Colors.white,
+        backgroundColor: Colors.black87,
         onTap: _navigateBottomBar,
         type: BottomNavigationBarType.fixed,
         items: [
@@ -48,55 +49,6 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Ajustes'),
         ],
       ),
-
-      /*
-        GNAV, ES UN POCO MÁS BONITO
-
-      bottomNavigationBar: Container(
-        color: Colors.black,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5),
-          child: GNav(
-            //Background
-            backgroundColor: Colors.black,
-            //Text and icon of Not selected tabs
-            color: Colors.white,
-            //Text and icon of Selected tab
-            activeColor: Colors.white,
-            //Color around selected tab
-            tabBackgroundColor: Colors.pink,
-            tabActiveBorder: Border.all(color: Colors.black),
-            //Space for expanding
-            gap: 12,
-            selectedIndex: _selectedIndex,
-            duration: Duration(milliseconds: 500),
-
-            onTabChange: (index) {
-              _selectedIndex = index;
-            },
-
-            padding: EdgeInsets.all(18),
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: 'Resumen',
-              ),
-              GButton(
-                icon: Icons.savings,
-                text: 'Hucha',
-              ),
-              GButton(
-                icon: Icons.insights,
-                text: 'Metas',
-              ),
-              GButton(
-                icon: Icons.settings,
-                text: 'Ajustes',
-              ),
-            ],
-          ),
-        ),
-      ),*/
     );
   }
 }

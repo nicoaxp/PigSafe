@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class AddMoney extends StatelessWidget {
   final String documentId;
 
-  AddMoney({required this.documentId});
+  const AddMoney({super.key, required this.documentId});
 
   @override
   Widget build(BuildContext context) {

@@ -3,6 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../crud/read_data.dart';
 
 class UserHome extends StatelessWidget {
@@ -34,37 +35,58 @@ class UserHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 50),
-            Text(
-              '¡Bienvenido! ' + user.email!,
-              style: TextStyle(fontSize: 24),
-            ),
-            Expanded(
-              child: FutureBuilder(
-                //what im waiting for to execute, in this case is getDocID
-                future: getDocID(),
-                builder: (context, snapshot) {
-                  return ListView.builder(
-                    itemCount: docIDs.length,
-                    itemBuilder: (context, index) {
-                      //we return the list tile from the doc ID
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          title: GetUsername(documentId: docIDs[index]),
-                          tileColor: Colors.pink[100],
-                        ),
-                      );
-                    },
-                  );
-                },
+      appBar: AppBar(
+        title: Center(
+          child: Text('Resumen'),
+        ),
+        backgroundColor: Colors.black,
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 40),
+              Text(
+                "Mi cuenta:",
+                style: GoogleFonts.bebasNeue(fontSize: 40),
               ),
-            ),
-          ],
+              SizedBox(height: 40),
+              Text(
+                '¡Empieza a ahorrar o márcate un objetivo nuevo!',
+                style: TextStyle(fontSize: 24),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Expanded(
+                child: FutureBuilder(
+                  //what im waiting for to execute, in this case is getDocID
+                  future: getDocID(),
+                  builder: (context, snapshot) {
+                    return ListView.builder(
+                      itemCount: docIDs.length,
+                      itemBuilder: (context, index) {
+                        //we return the list tile from the doc ID
+                        return Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: ListTile(
+                            title: GetFirstName(documentId: docIDs[index]),
+                            textColor: Colors.red,
+                            titleTextStyle: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
